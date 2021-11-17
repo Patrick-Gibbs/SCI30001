@@ -22,9 +22,7 @@ Output: the program outputs a csv called "Results" which contains the following 
 * target_population: restates the population targeted
 * 1,2,3...n – gives the frequencey of the most common nucleotide in the target population, in all other populations.
 
-
-
-Execution: run Experiment1 with the following: python3 Experiment1.py syncfile.sync 0 
+Execution: to run Experiment1 navigate into /Experiment1/ then use the following: python3 Experiment1.py [syncfile.sync] [population targeted] 
 
 argument 1 is the sync file anylised, and argument two is the population targetted in the sync file (counting from 0 to n-1 in the columns of the sync file).
 
