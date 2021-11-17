@@ -11,8 +11,18 @@ Dependencies: Python3.9 with Pandas 1.2.4, Biopython  1.79, Numpy 1.19.5.
 
 Input: The program takes a syncronised (sync) file.
 
-Output: the program outputs a csv called "Results" which gives the following:
-* abc
+Output: the program outputs a csv called "Results" which contains the following infomation for each nucleotide possition in all CRISPR/cas9 annealing site of the target population:
+* scafoldID – The Chromsome or scaffold of the nucelotide possition
+* possition – The possition of the CRISPR/cas9 annealing site in the scafold (as specified in the sync file) 
+* exact_possition – The possition of the nucleotide in the scafold (as specified in the sync file)
+* polymorphism_index – The possition of the nucleotide in the CRISPR/cas9 annealing site (counting from 0)
+* target_freq – The frequency of the nucleotide in the target population
+* in_gene – spefifies if the nucleotide lays in a (provided anotation file is provided(
+* spec_score – The D score for that nucleotide possition
+* target_population: restates the population targeted
+* 1,2,3...n – gives the frequencey of the most common nucleotide in the target population, in all other populations.
+
+
 
 Execution: run Experiment1 with the following: python3 Experiment1.py syncfile.sync 0 
 
