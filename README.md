@@ -26,5 +26,10 @@ Execution: to run Experiment1 navigate into /Experiment1/ then use the following
 
 argument 1 is the sync file anylised, and argument two is the population targetted in the sync file (counting from 0 to n-1 in the columns of the sync file).
 
-If a gene annotation file is avialable the follow command will add the gene annotation to the outputted CSVs
+
+Example Execultion with sample data: nagivagate to /Experiment1/ then run: python3 findDvalue.py ../Sample_Data/Lolium_small.sync 0 
+
+If a gene annotation file is avialable the running gene_ont.py will add the gene ontolgy row to the output csv
+
+
 
