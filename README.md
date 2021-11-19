@@ -73,7 +73,3 @@ Here I include the distance matrix and fst matrix which were computed to compair
 
 
 
-
-
-
-

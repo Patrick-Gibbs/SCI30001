@@ -91,7 +91,7 @@ class AnnealingSite():
                                 if pop_num != Constants.TARGED_POPULATION:
                                     # check reads in every population are of good quality.
                                     if '-' == extracted_reads[pop_num][read_index].max_base:
-                                        possition_score = 0
+                                        possition_score = -10000
                                         include_this_pam = False
                                         break
 

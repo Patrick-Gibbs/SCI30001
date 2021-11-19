@@ -2,11 +2,14 @@ import pandas as pd
 import numpy as np
 import time
 import sys
-t0 = time.time()
-scaffold_map = {}
 
-gene_ont_file = sys.argv[1]
-with open('gene_ont_file', 'r') as f:
+files = [0] # set to range(63) for all populations in dataset
+annotation_file = sys.argv[1] # normally 'Lp_Annotation_V1.1.mp.gff3'
+
+
+
+scaffold_map = {}
+with open(annotation_file, 'r') as f:
     f.readline()
     while 1:
         line = f.readline()
@@ -20,7 +23,7 @@ with open('gene_ont_file', 'r') as f:
             scaffold_map[line[0]] = [{'type': line[2], 'start': int(line[3]), 'finish': int(line[4])}]
 
 hits = []
-for i in range(63):
+for i in files:
     print(i)
     with open('Results/Results_' + str(i) + '.csv', 'r') as f:
         f.readline()
@@ -49,5 +52,5 @@ for i in range(63):
 
     data = pd.read_csv('Results/Results_' + str(i) + '.csv')
     data.insert(6, "in_gene", hits, allow_duplicates = False)
-    data.to_csv('Results/Results_' + str(i) + '.csv', index=False)
+    data.to_csv('Results' + str(i) + '.csv', index=False)
     hits = []
