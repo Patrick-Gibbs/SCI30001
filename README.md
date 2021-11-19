@@ -63,6 +63,8 @@ for doing pair wise comprasons as was conducted in the research report it is rec
 
 parallel python3 ./polymorphicSites.py {= 'if($arg[1]==$arg[2]) { skip() }' =} $sync_file ::: {0..63} ::: {0..63}
 
+by defult results are stored in the 'outputs' directory
+
 **Other files:**
 
 Here I include the distance matrix and fst matrix which were computed to compair pairs of populatoins. each row number pertains to the index provided in the sync file. the first row for both of these files gives the index and was used such that the matrix could be simply imported to pandas, however it can otherwise be ignored.
