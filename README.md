@@ -34,7 +34,7 @@ If a gene annotation file is avialable the running gene_ont.py will add the gene
 
 python3 gene_ont.py [annotation file]
 
-**Experiment 2**
+**Experiment 2:**
 Code for experment two compares two populations, and finds polymorphic CRISPR/Cas9 annealing sites between them. In the final report for the research project the number of polymorphic CRISPR/Cas9 annealing sites was used. It should be noted that code used here has been readpated serveral times, and thus does not provide the most elequant implementation.
 
 Dependencies: Python3.9 with Pandas 1.2.4, Biopython  1.79, Numpy 1.19.5.
@@ -62,6 +62,9 @@ python3 polymorphicSites.py 0 1 ../Sample_Data/Lolium_small.sync
 for doing pair wise comprasons as was conducted in the research report it is recommneded to use GNU parallel. In particualr the following command was used in the research report.
 
 parallel python3 ./polymorphicSites.py {= 'if($arg[1]==$arg[2]) { skip() }' =} $sync_file ::: {0..63} ::: {0..63}
+
+**Other files**
+Here I include the distance matrix and fst matrix which were computed to compair pairs of populatoins. each row number pertains to the index provided in the sync file
 
 
 
