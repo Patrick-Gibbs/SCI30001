@@ -37,6 +37,8 @@ python3 gene_ont.py [annotation file]
 **Experiment 2**
 Code for experment two compares two populations, and finds polymorphic CRISPR/Cas9 annealing sites between them. In the final report for the research project the number of polymorphic CRISPR/Cas9 annealing sites was used. It should be noted that code used here has been readpated serveral times, and thus does not provide the most elequant implementation.
 
+Dependencies: Python3.9 with Pandas 1.2.4, Biopython  1.79, Numpy 1.19.5.
+
 Input: A sync file and two populations (given as index in sync file [0-...])
 Output: Two fasta files, one named 30mers.fa and another 23mers.fa as well a file Frequenceys.csv.
 
