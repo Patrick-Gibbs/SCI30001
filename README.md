@@ -49,6 +49,18 @@ frequenceys.csv gives additional infomation about the annealing sites in 23mers.
 * polymorphims – the possitions in each CRISPR/cas9 annealing contain polymorphics
 * polymorphim_frequency – the frequencey of the nucleotide possitions described in polymorphisms
 
+Execulation – navigate to /Expermiment2/ and use the following command:
+
+python3 polymorphicSites.py [target population] [off target populations]
+
+target and off target populations are given by integers pertaining to the index in the sync file. For example if one wanted to compared population 0 to population 1 they would use:
+
+python3 polymorphicSites.py [target population] [off target populations]
+
+for doing pair wise comprasons as was conducted in the research report it is recommneded to use GNU parallel. In particualr the following command was used in the research report.
+
+parallel python3 ./polymorphicSites.py {= 'if($arg[1]==$arg[2]) { skip() }' =} $sync_file ::: {0..63} ::: {0..63}
+
 
 
 
