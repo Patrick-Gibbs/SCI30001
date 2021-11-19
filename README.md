@@ -26,13 +26,15 @@ Execution: to run Experiment1 navigate into /Experiment1/ then use the following
 
 argument 1 is the sync file anylised, and argument two is the population targetted in the sync file (counting from 0 to n-1 in the columns of the sync file).
 
+Example Execultion with sample data: nagivagate to /Experiment1/ then run: 
 
-Example Execultion with sample data: nagivagate to /Experiment1/ then run: python3 findDvalue.py ../Sample_Data/Lolium_small.sync 0
+```python3 findDvalue.py ../Sample_Data/Lolium_small.sync 0```
+
 this will give an output Results_0.csv
 
 If a gene annotation file is avialable the running gene_ont.py will add the gene ontolgy row to the output csv. To run it, edit the code such the "file" pertains to a list of integers corrosponding to the populations that need to be converted. for example if one would like to convert population 0 from the example above, ensure file is set to [0]. navigate to /Experiment1/ and use the following command:
 
-python3 gene_ont.py [annotation file]
+```python3 gene_ont.py [annotation file]```
 
 **Experiment 2:**
 Code for experment two compares two populations, and finds polymorphic CRISPR/Cas9 annealing sites between them. In the final report for the research project the number of polymorphic CRISPR/Cas9 annealing sites was used. It should be noted that code used here has been readpated serveral times, and thus does not provide the most elequant implementation.
@@ -53,7 +55,7 @@ frequenceys.csv gives additional infomation about the annealing sites in 23mers.
 
 Execulation – navigate to /Expermiment2/ and use the following command:
 
-python3 polymorphicSites.py [target population] [off target populations] [sync file]
+```python3 polymorphicSites.py [target population] [off target populations] [sync file]```
 
 target and off target populations are given by integers pertaining to the index in the sync file. For example if one wanted to compared population 0 to population 1 they would use:
 
