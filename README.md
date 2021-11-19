@@ -34,6 +34,21 @@ If a gene annotation file is avialable the running gene_ont.py will add the gene
 
 python3 gene_ont.py [annotation file]
 
+**Experiment 2**
+Code for experment two compares two populations, and finds polymorphic CRISPR/Cas9 annealing sites between them. In the final report for the research project the number of polymorphic CRISPR/Cas9 annealing sites was used. It should be noted that code used here has been readpated serveral times, and thus does not provide the most elequant implementation.
+
+Input: A sync file and two populations (given as index in sync file [0-...])
+Output: Two fasta files, one named 30mers.fa and another 23mers.fa as well a file Frequenceys.csv.
+
+23mers.fa gives the sequences of all polymorhic CRISPR annelaing sites (20nt gRNA annealing site + NGG PAM) between the two populations, in the fasta header is the populations number and, whether the sequence is found on the plus or minus strand, and the index in the file to which the annealing site pertains.
+
+30mers.fa gives the same sequence as 23mer plus additional surrounding nucleotides. This file is created such that it can be read by CRISPRon, a program that estimates cleavage effeiency for a CRISPR/cas9 annealing site based on sequence and can be found here https://github.com/RTH-tools/crispron. As it was not mentioned in the research report implmentation of crispron is not included here, but can be provided apon request.
+
+frequenceys.csv gives additional infomation about the annealing sites in 23mers.fa/30mers.fa:
+* possition - the genomic location in the given scafold of the 
+* polymorphims – the possitions in each CRISPR/cas9 annealing contain polymorphics
+* polymorphim_frequency – the frequencey of the nucleotide possitions described in polymorphisms
+
 
 
 
