@@ -2,7 +2,7 @@
 
 Here I include code from my Univerity of Melborune Research Project – Investigating The Potential of Population Specific Homing Drives in Lolium Rigidum.
 
-I pressent two pipelines which pertain to experiment 1 and exerpeiment 2 decribed in the research report.
+I pressent two pipelines which pertain to experiment 1 and exerpeiment 2 decribed in the research report. included is some sample data, which is a subset of the data utilized in the research project
 
 
 
