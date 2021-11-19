@@ -57,7 +57,7 @@ python3 polymorphicSites.py [target population] [off target populations] [sync f
 
 target and off target populations are given by integers pertaining to the index in the sync file. For example if one wanted to compared population 0 to population 1 they would use:
 
-python3 polymorphicSites.py 0 1 ../Sample_Data/Lolium_small.sync
+'''python3 polymorphicSites.py 0 1 ../Sample_Data/Lolium_small.sync'''
 
 for doing pair wise comprasons as was conducted in the research report it is recommneded to use GNU parallel. In particualr the following command was used in the research report.
 
