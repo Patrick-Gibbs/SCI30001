@@ -27,9 +27,16 @@ Execution: to run Experiment1 navigate into /Experiment1/ then use the following
 argument 1 is the sync file anylised, and argument two is the population targetted in the sync file (counting from 0 to n-1 in the columns of the sync file).
 
 
-Example Execultion with sample data: nagivagate to /Experiment1/ then run: python3 findDvalue.py ../Sample_Data/Lolium_small.sync 0 
+Example Execultion with sample data: nagivagate to /Experiment1/ then run: python3 findDvalue.py ../Sample_Data/Lolium_small.sync 0
+this will give an output Results_0.csv
 
-If a gene annotation file is avialable the running gene_ont.py will add the gene ontolgy row to the output csv
+If a gene annotation file is avialable the running gene_ont.py will add the gene ontolgy row to the output csv. To run it, edit the code such the "file" pertains to a list of integers corrosponding to the populations that need to be converted. for example if one would like to convert population 0 from the example above, ensure file is set to [0]. navigate to /Experiment1/ and use the following command:
+
+python3 gene_ont.py [annotation file]
+
+
+
+
 
 
 
